@@ -370,50 +370,25 @@ section { padding: 6rem 2rem; }
   width: 100%;
   height: 100%;
   transition: transform 0.6s ease;
+  position: relative;
 }
 
 .project:hover .project-visual-inner { transform: scale(1.04); }
 
-/* Chaque projet a sa propre palette organique */
-.project-1 .project-visual-inner {
-  background: linear-gradient(160deg, #87CEEB 0%, #4A90B8 40%, #2B3A4E 100%);
+/* Iframe preview des vrais sites */
+.project-visual-inner iframe {
+  width: 200%;
+  height: 200%;
+  border: none;
+  transform: scale(0.5);
+  transform-origin: top left;
+  pointer-events: none;
 }
 
-.project-2 .project-visual-inner {
-  background: linear-gradient(140deg, #F5EFE6 0%, #C9B99A 40%, #2B3A4E 100%);
-}
-
-.project-3 .project-visual-inner {
-  background: linear-gradient(150deg, #E8DDD0 0%, #8B7355 40%, #1a1a2e 100%);
-}
-
-/* Formes irrégulières dans les visuels projet */
-.project-shape {
-  position: absolute;
-  border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
-  opacity: 0.3;
-}
-
-.project-1 .project-shape {
-  width: 60%; height: 50%;
-  top: 25%; left: 20%;
-  background: rgba(255,255,255,0.4);
-  border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
-}
-
-.project-2 .project-shape {
-  width: 50%; height: 60%;
-  top: 20%; left: 30%;
-  background: rgba(255,255,255,0.35);
-  border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%;
-}
-
-.project-3 .project-shape {
-  width: 55%; height: 55%;
-  top: 22%; left: 22%;
-  background: rgba(255,255,255,0.35);
-  border-radius: 50% 50% 40% 60% / 60% 45% 55% 40%;
-}
+/* Fallback gradient derrière les iframes */
+.project-1 .project-visual-inner { background: #1a2332; }
+.project-2 .project-visual-inner { background: #f0ebe3; }
+.project-3 .project-visual-inner { background: #f5f0ea; }
 
 .project-info {
   position: absolute;
@@ -660,8 +635,9 @@ footer {
   <div class="projects">
     <a href="https://demo-cannes-aviation.vercel.app" target="_blank" class="project project-1 reveal">
       <div class="project-visual">
-        <div class="project-visual-inner"></div>
-        <div class="project-shape"></div>
+        <div class="project-visual-inner">
+          <iframe src="https://demo-cannes-aviation.vercel.app" loading="lazy" title="Cannes Aviation Academy"></iframe>
+        </div>
         <div class="project-info">
           <span>Aviation</span>
           <h3>Cannes Aviation Academy</h3>
@@ -669,21 +645,23 @@ footer {
       </div>
     </a>
 
-    <a href="https://mindstone-immo.vercel.app" target="_blank" class="project project-2 reveal reveal-delay-1">
+    <a href="https://vectis-eight.vercel.app" target="_blank" class="project project-2 reveal reveal-delay-1">
       <div class="project-visual">
-        <div class="project-visual-inner"></div>
-        <div class="project-shape"></div>
+        <div class="project-visual-inner">
+          <iframe src="https://vectis-eight.vercel.app" loading="lazy" title="Vectis"></iframe>
+        </div>
         <div class="project-info">
-          <span>Immobilier</span>
-          <h3>Mindstone Immobilier</h3>
+          <span>Finance</span>
+          <h3>Vectis</h3>
         </div>
       </div>
     </a>
 
     <a href="https://mindstone-fo.vercel.app" target="_blank" class="project project-3 reveal reveal-delay-2">
       <div class="project-visual">
-        <div class="project-visual-inner"></div>
-        <div class="project-shape"></div>
+        <div class="project-visual-inner">
+          <iframe src="https://mindstone-fo.vercel.app" loading="lazy" title="Mindstone"></iframe>
+        </div>
         <div class="project-info">
           <span>Family Office</span>
           <h3>Mindstone</h3>
