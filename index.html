@@ -375,17 +375,14 @@ section { padding: 6rem 2rem; }
 
 .project:hover .project-visual-inner { transform: scale(1.04); }
 
-/* Iframe preview des vrais sites */
-.project-visual-inner iframe {
-  width: 200%;
-  height: 200%;
-  border: none;
-  transform: scale(0.5);
-  transform-origin: top left;
-  pointer-events: none;
+/* Screenshot preview des vrais sites */
+.project-visual-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
-/* Fallback gradient derrière les iframes */
 .project-1 .project-visual-inner { background: #1a2332; }
 .project-2 .project-visual-inner { background: #f0ebe3; }
 .project-3 .project-visual-inner { background: #f5f0ea; }
@@ -636,7 +633,7 @@ footer {
     <a href="https://demo-cannes-aviation.vercel.app" target="_blank" class="project project-1 reveal">
       <div class="project-visual">
         <div class="project-visual-inner">
-          <iframe src="https://demo-cannes-aviation.vercel.app" loading="lazy" title="Cannes Aviation Academy"></iframe>
+          <img src="https://image.thum.io/get/width/800/crop/900/https://demo-cannes-aviation.vercel.app" alt="Cannes Aviation Academy" loading="lazy">
         </div>
         <div class="project-info">
           <span>Aviation</span>
@@ -648,7 +645,7 @@ footer {
     <a href="https://vectis-eight.vercel.app" target="_blank" class="project project-2 reveal reveal-delay-1">
       <div class="project-visual">
         <div class="project-visual-inner">
-          <iframe src="https://vectis-eight.vercel.app" loading="lazy" title="Vectis"></iframe>
+          <img src="https://image.thum.io/get/width/800/crop/600/https://vectis-eight.vercel.app" alt="Vectis" loading="lazy">
         </div>
         <div class="project-info">
           <span>Finance</span>
@@ -660,7 +657,7 @@ footer {
     <a href="https://mindstone-fo.vercel.app" target="_blank" class="project project-3 reveal reveal-delay-2">
       <div class="project-visual">
         <div class="project-visual-inner">
-          <iframe src="https://mindstone-fo.vercel.app" loading="lazy" title="Mindstone"></iframe>
+          <img src="https://image.thum.io/get/width/800/crop/600/https://mindstone-fo.vercel.app" alt="Mindstone" loading="lazy">
         </div>
         <div class="project-info">
           <span>Family Office</span>
